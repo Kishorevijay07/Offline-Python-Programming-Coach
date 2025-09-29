@@ -1,0 +1,114 @@
+
+/* src/App.css */
+.app {
+  display: flex;
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #eee;
+}
+
+.editor-section {
+  flex: 1;
+  padding: 20px;
+  border-right: 2px solid #444;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.editor-header h2 {
+  margin: 0;
+  color: #00e5ff;
+  font-size: 20px;
+}
+
+.editor-header button {
+  background: #ff4081;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.editor-header button:hover:not(:disabled) {
+  background: #ff1a66;
+  transform: scale(1.05);
+}
+
+.editor-header button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+.editor {
+  flex: 1;
+  width: 100%;
+  padding: 12px;
+  font-family: "Fira Code", monospace;
+  font-size: 14px;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  border: 1px solid #333;
+  border-radius: 6px;
+  resize: none;
+  outline: none;
+  line-height: 1.4;
+  transition: border 0.2s ease;
+}
+
+.editor:focus {
+  border: 1px solid #00e5ff;
+  box-shadow: 0 0 5px #00e5ff;
+}
+
+.output-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.reasoning,
+.debug {
+  flex: 1;
+  margin-bottom: 15px;
+  border: 1px solid #444;
+  padding: 14px;
+  border-radius: 8px;
+  background: #121212;
+  overflow-y: auto;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.7);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.reasoning:hover,
+.debug:hover {
+  transform: scale(1.01);
+  background: #1a1a1a;
+}
+
+.reasoning h3,
+.debug h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #00e5ff;
+}
+
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: "Fira Code", monospace;
+  color: #f8f8f2;
+}
